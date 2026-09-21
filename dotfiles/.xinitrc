@@ -1,6 +1,6 @@
 #!/bin/bash
 export GTK_THEME=Adwaita:dark
-[[ -f ~/.screenlayout/default.sh ]] && sh ~/.screenlayout/default.sh
+[[ -f ~/.config/screenlayout/default.sh ]] && sh ~/.config/screenlayout/default.sh
 while xsetroot -name "`date +'%a %b %d %R %Y'` CPU `top -bn 1 | awk 'FNR == 3 {print 100-$8}'`% Mem `free -h --giga | awk 'FNR == 2 {print $3+$5}'`G Disk `df -h | grep -e "466" | awk '{print $4}'`"
 do
 	sleep 3
